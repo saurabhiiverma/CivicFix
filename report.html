@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>CivicFix</h2>
+
+<a href="/dashboard">🏠 Dashboard</a>
+
+<a href="/report">📢 Report Issue</a>
+
+<a href="/complaints">📋 View Complaints</a>
+
+<a href="/track">🔎 Track Complaint</a>
+
+<a href="/map">🗺 Nearby Issues Map</a>
+
+<a href="/profile">👤 Profile</a>
+
+</div>
+
+<div class="main">
+
+<div class="container">
+
+<h2>Report Civic Issue</h2>
+
+<form method="post" enctype="multipart/form-data">
+
+<input name="title" placeholder="Issue Title">
+
+<textarea name="description" placeholder="Describe the issue"></textarea>
+
+<select name="category">
+
+<option>Pothole</option>
+<option>Garbage</option>
+<option>Water Leakage</option>
+<option>Broken Streetlight</option>
+<option>Road Damage</option>
+
+</select>
+<input name="location" placeholder="Location">
+
+<input type="file" name="image">
+
+<button class="btn">Submit Complaint</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

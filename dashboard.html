@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>CivicFix</h2>
+
+<a href="/dashboard">🏠 Dashboard</a>
+
+<a href="/report">📢 Report Issue</a>
+
+<a href="/complaints">📋 View Complaints</a>
+
+<a href="/track">🔎 Track Complaint</a>
+
+<a href="/map">🗺 Nearby Issues Map</a>
+
+<a href="/profile">👤 Profile</a>
+
+</div>
+
+<div class="main">
+
+<h1>Welcome to CivicFix</h1>
+
+<p>Smart civic issue reporting platform.</p>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Report a Problem</h3>
+<p>Report potholes, garbage, broken streetlights etc.</p>
+<a href="/report" class="btn">Report Now</a>
+</div>
+
+<div class="card">
+<h3>View Complaints</h3>
+<p>Track status of civic complaints.</p>
+<a href="/complaints" class="btn">View Complaints</a>
+</div>
+
+</div>
+<canvas id="chart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const data = {
+labels: ["Pothole","Garbage","Water Leakage","Streetlight"],
+datasets: [{
+label: "Complaints",
+data: [{{pothole}}, {{garbage}}, {{water}}, {{street}}],
+backgroundColor:["#3b82f6","#10b981","#f59e0b","#ef4444"]
+}]
+};
+
+new Chart(document.getElementById("chart"),{
+type:"bar",
+data:data
+});
+
+</script>
+</div>
+
+</body>
+
+</html>

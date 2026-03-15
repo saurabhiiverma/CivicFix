@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>CivicFix</h2>
+
+<a href="/dashboard">🏠 Dashboard</a>
+
+<a href="/report">📢 Report Issue</a>
+
+<a href="/complaints">📋 View Complaints</a>
+
+<a href="/track">🔎 Track Complaint</a>
+
+<a href="/map">🗺 Nearby Issues Map</a>
+
+<a href="/profile">👤 Profile</a>
+
+</div>
+
+<div class="main">
+
+<h2>Reported Complaints</h2>
+
+<div class="card-container">
+
+{% for c in complaints %}
+
+<div class="card">
+
+<h3>{{c.title}}</h3>
+
+<p><b>Category:</b> {{c.category}}</p>
+<p><b>Location:</b> {{c.location}}</p>
+<p><b>Status:</b> {{c.status}}</p>
+
+<p><b>Votes:</b> {{c.votes}}</p>
+
+<a href="/vote/{{c.id}}" class="btn">👍 Upvote</a>
+
+<img src="/static/uploads/{{c.image}}" width="100%">
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</body>
+
+</html>
